@@ -1,11 +1,11 @@
 package org.example.spring.lang.impl;
 
-import org.example.spring.lang.ILanguage;
+import org.example.spring.lang.LanguageSp;
 
-public class English  implements ILanguage {
+public class English  implements LanguageSp {
 
     @Override
-    public String textToAudio() {
+    public String getGreeting() {
         return "Hello";
     }
 
