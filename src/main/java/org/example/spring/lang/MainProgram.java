@@ -15,11 +15,13 @@ public class MainProgram {
         //Вы создаете объект ApplicationContext читая конфигурацию в классе AppConfiguration, как в коде ниже.
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfiguration.class);
 
+
         System.out.println("----------");
-        Language language = (Language) context.getBean("language");
+        ILanguage language = (ILanguage) context.getBean("Vasiya");
+
 
         System.out.println("Bean Language: "+ language);
-        System.out.println("Call language.sayBye(): "+ language.getBye());
+
 
         System.out.println("----------");
 

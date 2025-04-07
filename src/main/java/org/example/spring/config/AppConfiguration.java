@@ -1,7 +1,7 @@
 package org.example.spring.config;
 
-import org.example.spring.lang.impl.Vietnamese;
-import org.example.spring.lang.Language;
+import org.example.spring.lang.impl.English;
+import org.example.spring.lang.ILanguage;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -16,7 +16,6 @@ import org.springframework.context.annotation.Configuration;
 // (Создать объекты из класса аннотированные с помощью @Service, @Component или @Repository).
 // @ComponentScan - Говорит Spring про пакеты для поиска других Spring BEAN, Spring сканирует (scan) эти пакеты для поиска.
 @ComponentScan({"org.example.spring.bean"})
-
 public class AppConfiguration {
 
     //Spring создает Spring BEAN, в соответствии с определениями в классе AppConfiguration,
@@ -27,9 +26,10 @@ public class AppConfiguration {
     //В примере beanOne получает ссылку на beanTwo через внедрение конструктора.
     //Этот метод объявления зависимостей между компонентами работает только тогда,
     // когда метод @Bean объявлен в классе @Configuration. Вы не можете объявлять зависимости между компонентами, используя простые классы @Component.
-    @Bean(name ="language")
-    public Language getLanguage() {
-        return new Vietnamese();
+    @Bean(name ="Vasiya")
+    public ILanguage Vasiya() {
+        return new English();
     }
+
 
 }

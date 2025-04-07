@@ -1,12 +1,12 @@
 package org.example.spring.lang.impl;
 
-import org.example.spring.lang.Language;
+import org.example.spring.lang.ILanguage;
 
 // Vietnamese
-public class Vietnamese implements Language {
+public class Vietnamese implements ILanguage {
 
     @Override
-    public String getGreeting() {
+    public String textToAudio() {
         return "Xin Chao";
     }
 

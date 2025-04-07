@@ -2,10 +2,10 @@ package org.example.spring.lang;
 
 
 // A Language
-public interface Language {
+public interface ILanguage {
 
     // Get a greeting
-    public String getGreeting();
+    public String textToAudio();
 
     // Get a bye
     public String getBye();
