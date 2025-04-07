@@ -1,6 +1,6 @@
 package org.example.spring.bean;
 
-import org.example.spring.lang.ILanguage;
+import org.example.spring.lang.LanguageSp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +17,7 @@ public class GreetingService {
     //@Autowired аннотирован на поле (field) чтобы сказать Spring что нужно вколоть (inject) значение в это поле.
     // Примечание: вколоть здесь означает наподобии прикреплении значения этому полю.
     @Autowired
-    private ILanguage language;
+    private LanguageSp language;
 
     public GreetingService() {
 
@@ -25,7 +25,7 @@ public class GreetingService {
 
     public void sayGreeting() {
 
-        String greeting = language.textToAudio();
+        String greeting = language.getGreeting();
 
         System.out.println("Greeting: " + greeting);
     }

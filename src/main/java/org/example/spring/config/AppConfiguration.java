@@ -1,7 +1,7 @@
 package org.example.spring.config;
 
 import org.example.spring.lang.impl.English;
-import org.example.spring.lang.ILanguage;
+import org.example.spring.lang.LanguageSp;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -27,7 +27,7 @@ public class AppConfiguration {
     //Этот метод объявления зависимостей между компонентами работает только тогда,
     // когда метод @Bean объявлен в классе @Configuration. Вы не можете объявлять зависимости между компонентами, используя простые классы @Component.
     @Bean(name ="Vasiya")
-    public ILanguage Vasiya() {
+    public LanguageSp Vasiya() {
         return new English();
     }
 

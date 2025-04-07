@@ -17,11 +17,11 @@ public class MainProgram {
 
 
         System.out.println("----------");
-        ILanguage language = (ILanguage) context.getBean("Vasiya");
+        LanguageSp language = (LanguageSp) context.getBean("Vasiya");
 
 
         System.out.println("Bean Language: "+ language);
-
+        System.out.println("Call language.sayBye(): "+ language.getBye());
 
         System.out.println("----------");
 
